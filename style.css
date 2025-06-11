@@ -83,3 +83,32 @@ section {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.header img {
+		width: 80%;
+		max-width: 250px;
+		margin: 20px 0;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	body {
+		padding: 10px;
+		background-size: 150px;
+	}
+
+	section {
+		margin-bottom: 30px;
+	}
+}

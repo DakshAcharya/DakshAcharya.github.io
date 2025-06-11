@@ -87,6 +87,7 @@ section {
 	.header {
 		flex-direction: column;
 		text-align: center;
+		word-wrap: break-word;
 	}
 
 	.header img {
@@ -106,6 +107,7 @@ section {
 	body {
 		padding: 10px;
 		background-size: 150px;
+		word-wrap: break-word;
 	}
 
 	section {

@@ -186,3 +186,50 @@ span {
 		font-size: 4.5rem;
 	}
 }
+
+/* Contact section */
+
+.contact {
+	color: rgb(100, 0, 200);
+	display: flex;
+	flex-direction: column;
+	align-items: center;      
+	justify-content: center;   
+	height: 100vh;            
+	text-align: center; 
+
+}
+
+.contact h1 {
+	font-size: 72px; /* Big and bold */
+	margin: 0;
+}
+
+.contact h2 {
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+/* Container */
+.contact {
+	color: rgb(100, 0, 200);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+}
+
+/* Headings */
+.contact h1 {
+	font-size: 72px;
+	margin: 0;
+}
+
+.contact h2 {
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 10px;
+}

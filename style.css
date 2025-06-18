@@ -1,3 +1,6 @@
+/*====================================================================================================
+										General Format
+====================================================================================================*/
 * {
 	margin: 0;
 	padding: 0;
@@ -21,13 +24,26 @@ body {
 	color: white;
 }
 
+section {
+	min-height: 100vh;
+	padding: 6rem 9% 5rem;
+}
+
+span {
+	color: rgb(100, 0, 200);
+}
+
+/*====================================================================================================
+										Lists/Sub-List
+====================================================================================================*/
 ul ul {
 	margin-top: 5px;
 	margin-left: 20px;
 }
 
-
-/* Header + Nav */
+/*====================================================================================================
+										Header
+====================================================================================================*/
 .header {
 	margin-top: 20px;
 	position: fixed;
@@ -42,6 +58,9 @@ ul ul {
 	z-index: 100;
 }
 
+/*====================================================================================================
+										Logo
+====================================================================================================*/
 .logo {
 	font-size: 3rem;
 	color: rgb(255, 255, 255);
@@ -55,6 +74,9 @@ ul ul {
 	color: rgb(100, 0, 200);
 }
 
+/*====================================================================================================
+											Nav
+====================================================================================================*/
 .navbar {
 	display: flex;
 	gap: 4rem;
@@ -73,12 +95,9 @@ ul ul {
 	border-bottom: 3px solid rgb(100, 0, 200);
 }
 
-/* Hero Section */
-section {
-	min-height: 100vh;
-	padding: 6rem 9% 5rem;
-}
-
+/*====================================================================================================
+										Home
+====================================================================================================*/
 .home {
 	display: flex;
 	justify-content: center;
@@ -93,10 +112,6 @@ section {
 	line-height: 1.3;
 }
 
-span {
-	color: rgb(100, 0, 200);
-}
-
 .homeimg {
 	border-radius: 50%;
 }
@@ -104,12 +119,15 @@ span {
 .homeimg img {
 	position: relative;
 	width: 32vw;
-	border-radius: 50%;
+	border-radius: 70%;
 	box-shadow: 0 0 25px solid rgb(100, 0, 200);
 	cursor: pointer;
 	transition: 0.2s linear;
 }
 
+/*====================================================================================================
+										Social Media Icons
+====================================================================================================*/
 .socials a {
 	display: inline-flex;
 	justify-content: center;
@@ -131,6 +149,9 @@ span {
 	box-shadow: 0 0 25px rgb(100, 0, 200);
 }
 
+/*====================================================================================================
+										Buttons
+====================================================================================================*/
 .btn {
 	display: inline-block;
 	padding: 1rem 2.8rem;
@@ -152,7 +173,9 @@ span {
 	box-shadow: 0 0 25px rgb(100, 0, 200);
 }
 
-/* Responsive Styles */
+/*====================================================================================================
+										Cross Platform
+====================================================================================================*/
 @media (max-width: 1000px) {
 	.home {
 		gap: 4rem;
@@ -176,11 +199,6 @@ span {
 	}
 
 	.navbar a {
-		font-size: 1.6rem;
-		margin: 0;
-	}
-
-	.navbar a {
 		font-size: 2rem;
 		margin: 0;
 	}
@@ -201,61 +219,41 @@ span {
 	}
 }
 
+/*====================================================================================================
+										About Section
+====================================================================================================*/
 #me {
 	max-width: 800px;
- 	margin: 0 auto;
+	margin: 0 auto;
 	padding: 2rem;
 	line-height: 1.7;
-	align-content: baseline ;
+	align-content: baseline;
 }
 
 #me ul {
 	padding-left: 20px;
-  	margin-bottom: 1em;
+	margin-bottom: 1em;
 	margin-left: 1.5rem;
 }
 
 #me h2 {
-  	margin-top: 2rem;
-  	margin-bottom: 1rem;
-  	font-size: 2.4rem;
-  	color: rgb(200, 200, 200);
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-size: 2.4rem;
+	color: rgb(200, 200, 200);
 	text-align: center;
 }
 
 #me hr {
-  	border: none;
-  	height: 2px;
-  	background-color: rgb(110, 110, 110);
-  	margin: 20px 0;
+	border: none;
+	height: 2px;
+	background-color: rgb(110, 110, 110);
+	margin: 20px 0;
 }
 
-
-/* Contact section */
-
-#contact {
-	color: rgb(100, 0, 200);
-	display: flex;
-	flex-direction: column;
-	align-items: center;      
-	justify-content: center;   
-	height: 100vh;            
-	text-align: center; 
-
-}
-
-#contact h1 {
-	font-size: 72px; /* Big and bold */
-	margin: 0;
-}
-
-#contact h2 {
-	font-size: 32px;
-	font-weight: normal;
-	margin-top: 10px;
-}
-
-/* Container */
+/*====================================================================================================
+										Contact
+====================================================================================================*/
 #contact {
 	color: rgb(100, 0, 200);
 	display: flex;
@@ -266,7 +264,6 @@ span {
 	text-align: center;
 }
 
-/* Headings */
 #contact h1 {
 	font-size: 72px;
 	margin: 0;

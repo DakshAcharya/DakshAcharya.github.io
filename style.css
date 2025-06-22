@@ -123,7 +123,7 @@ footer{
 .homeimg img {
 	position: relative;
 	width: 28vw;
-	border-radius: 70%;
+	border-radius: 10%;
 	border: 3px solid #7f47f4;
 	cursor: pointer;
 	transition: 0.2s linear;
@@ -166,7 +166,7 @@ footer{
 	background-color: black;
 	border-radius: 4rem;
 	font-size: 1.6rem;
-	color: #7f47f4;
+	color: #ffffff;
 	font-weight: 600;
 	border: 2px solid #7f47f4;
 	transition: 0.3s ease;
@@ -225,6 +225,12 @@ footer{
 	.home .content h1 {
 		font-size: 4.5rem;
 	}
+
+	#projects .grid{
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	gap: 20px;
+}
 }
 
 /*====================================================================================================
@@ -248,14 +254,14 @@ footer{
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 	font-size: 2.4rem;
-	color: rgb(200, 200, 200);
+	color: #ffffff;
 	text-align: center;
 }
 
 #me hr {
 	border: none;
 	height: 2px;
-	background-color: rgb(110, 110, 110);
+	background-color: #7f47f4;
 	margin: 20px 0;
 }
 
@@ -267,7 +273,6 @@ footer{
 										Contact
 ====================================================================================================*/
 #contact {
-	color: #7f47f4;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -277,11 +282,13 @@ footer{
 }
 
 #contact h1 {
+	color: #ffffff;
 	font-size: 72px;
 	margin: 0;
 }
 
 #contact h2 {
+	color: #7f47f4;
 	font-size: 32px;
 	font-weight: normal;
 	margin-top: 10px;
@@ -296,8 +303,15 @@ footer{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 40vw;
+	height: 40vh;
 	text-align: center;
+}
+
+#projects .btn:hover{
+	color: black;
+	transform: scale(1.05) translateY(-5px);
+	background-color: #7f47f4;
+	box-shadow: 0 0 25px #7f47f4;
 }
 
 .grid{
@@ -305,18 +319,4 @@ footer{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 25px;
-}
-
-.card{
-	display: block;
-	padding: 3rem 3rem;
-	background-color: black;
-	border-radius: 4rem;
-	font-size: 1.6rem;
-	color: #7f47f4;
-	font-weight: 600;
-	border: 2px solid #7f47f4;
-	transition: 0.3s ease;
-	cursor: pointer;
-	margin-top: 3rem;
 }

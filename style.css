@@ -21,7 +21,7 @@ body {
 	width: 100%;
 	height: 100vh;
 	background-color: black;
-	color: white;
+	color: hsl(0, 0%, 95%);
 }
 
 section {
@@ -67,7 +67,7 @@ footer{
 ====================================================================================================*/
 .logo {
 	font-size: 3rem;
-	color: rgb(255, 255, 255);
+	color: hsl(0, 0%, 95%);
 	font-weight: 800;
 	cursor: pointer;
 	transition: 0.5s ease;
@@ -122,11 +122,15 @@ footer{
 
 .homeimg img {
 	position: relative;
-	width: 32vw;
+	width: 28vw;
 	border-radius: 70%;
-	box-shadow: 0 0 25px solid #7f47f4;
+	border: 3px solid #7f47f4;
 	cursor: pointer;
 	transition: 0.2s linear;
+}
+
+.content{
+	font-size: 1.3rem;
 }
 
 /*====================================================================================================

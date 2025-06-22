@@ -290,10 +290,21 @@ footer{
 /*====================================================================================================
 										Projects
 ====================================================================================================*/
+
+#projects .btn{
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40vw;
+	text-align: center;
+}
+
 .grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
+	gap: 25px;
 }
 
 .card{

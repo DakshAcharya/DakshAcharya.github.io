@@ -100,6 +100,14 @@ footer{
 	border-bottom: 3px solid #7f47f4;
 }
 
+#menu{
+	display: none;
+}
+
+.menu-icon{
+	display: none;
+}
+
 /*====================================================================================================
 										Home
 ====================================================================================================*/
@@ -211,6 +219,14 @@ footer{
 		font-size: 2rem;
 		margin: 0;
 	}
+
+	#menu{
+		display: none;
+	}
+	
+	.menu-icon{
+	display: flex;
+	}	
 
 	#menu:checked ~ navbar{
 		display: flex;

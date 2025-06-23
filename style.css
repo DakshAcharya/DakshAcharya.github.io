@@ -212,6 +212,14 @@ footer{
 		margin: 0;
 	}
 
+	#menu:checked ~ navbar{
+		display: flex;
+	}
+
+	#menu:not(:checked) ~ .navbar {
+		display: none;
+	}
+
 	.home {
 		flex-direction: column;
 		text-align: center;

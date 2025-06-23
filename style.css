@@ -31,6 +31,7 @@ section {
 
 span {
 	color: #7f47f4;
+	font-weight: 700;
 }
 
 /*====================================================================================================
@@ -227,10 +228,16 @@ footer{
 	}
 
 	#projects .grid{
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	gap: 20px;
-}
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		gap: 20px;
+	}
+
+	#side-quests .grid{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		gap: 20px;
+	}
 }
 
 /*====================================================================================================
@@ -242,6 +249,7 @@ footer{
 	padding: 2rem;
 	line-height: 1.7;
 	align-content: baseline;
+	font-size: 1.3rem;
 }
 
 #me ul {
@@ -319,4 +327,23 @@ footer{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 25px;
+}
+
+/*====================================================================================================
+										Side Quests
+====================================================================================================*/
+#side-quests .btn{
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40vh;
+	text-align: center;
+}
+
+#side-quests .btn:hover{
+	color: black;
+	transform: scale(1.05) translateY(-5px);
+	background-color: #7f47f4;
+	box-shadow: 0 0 25px #7f47f4;
 }

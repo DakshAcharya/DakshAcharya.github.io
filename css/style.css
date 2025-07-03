@@ -64,6 +64,13 @@ ul ul {
 	gap: 25px;
 }
 
+.subtext {
+	font-size: 1.2rem;
+	margin-top: 1rem;
+	margin-bottom: 6rem;
+	text-align: center;
+}
+
 /*====================================================================================================
 										   Header + Footer
 ====================================================================================================*/
@@ -330,12 +337,6 @@ header {
 	transform: scale(1.1);
 }
 
-.subtext {
-	margin-top: 1rem;
-	font-size: 1.4rem;
-	margin-bottom: 6rem;
-}
-
 #me hr {
 	border: none;
 	height: 2px;
@@ -394,8 +395,4 @@ header {
 	color: #000;
 	transform: scale(1.03) translateY(-5px);
 	box-shadow: 0 0 20px #7f47f4;
-}
-
-.subtext {
-	font-size: 1.2rem;
 }

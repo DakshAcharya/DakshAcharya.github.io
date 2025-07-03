@@ -2,6 +2,7 @@
 											General Format
 ====================================================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -226,35 +227,16 @@ header {
 
 @media (max-width: 768px) {
 	header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 1rem 9%;
-	background-color: rgba(0, 0, 0, 0.8);
-	box-sizing: border-box;
-	min-height: 70px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	z-index: 100;
+		min-height: 70px;
+		box-sizing: border-box;
 	}
 
 	.header-text {
 		margin-top: 10px;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		color: #f2f2f2;
 	}
 
 	.logo {
 		font-size: 2rem;
-		color: #f2f2f2;
-		font-weight: 900;
-		cursor: default;
-		transition: 0.5s ease;
 	}
 
 	.navbar {
@@ -263,7 +245,6 @@ header {
 		gap: 1rem;
 		position: absolute;
 		top: 100%;
-		left: auto;
 		right: 0;
 		width: 45vw;
 		max-width: 250px;
@@ -274,11 +255,6 @@ header {
 
 	.navbar a {
 		font-size: 2rem;
-		margin: 0;
-	}
-
-	#menu {
-		display: none;
 	}
 
 	.menu-icon {
@@ -319,35 +295,8 @@ header {
 /*====================================================================================================
 											About Section
 ====================================================================================================*/
-#me {
-	max-width: 800px;
-	margin: 30px auto 0;
-	padding: 2rem;
-	line-height: 1.7;
-	align-content: baseline;
-	font-size: 1.3rem;
-}
-
-#me ul {
-	padding-left: 20px;
-	margin-bottom: 1em;
-	margin-left: 1.5rem;
-}
-
-#me h1 {
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	font-size: 6rem;
-	color: #f2f2f2;
-	text-align: center;
-}
-
-#me h2 {
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	font-size: 2.4rem;
-	color: #f2f2f2;
-	text-align: center;
+.icon-block img {
+	width: 10rem;
 }
 
 #me hr {
@@ -387,7 +336,7 @@ header {
 ====================================================================================================*/
 .card {
 	display: flex;
-	flex-direction: column; /* allow stacked content */
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 40vh;
@@ -410,7 +359,6 @@ header {
 	box-shadow: 0 0 20px #7f47f4;
 }
 
-
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -418,6 +366,6 @@ header {
 	gap: 25px;
 }
 
-.subtext{
+.subtext {
 	font-size: 1.2rem;
 }

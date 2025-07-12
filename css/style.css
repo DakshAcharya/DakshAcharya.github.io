@@ -231,6 +231,145 @@ header {
 }
 
 /*====================================================================================================
+											About Section
+====================================================================================================*/
+#me {
+	font-size: 1.4rem;
+}
+
+.icon-block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+	text-align: center;
+}
+
+.icon-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.icon-item img {
+	margin-top: 4rem;
+	width: 8rem;
+	transition: 0.3s ease;
+}
+
+.icon-item img:hover {
+	transform: scale(1.1);
+}
+
+#me hr {
+	border: none;
+	height: 2px;
+	background-color: #7f47f4;
+}
+
+.achievements,
+.certificates,
+.extracurriculars{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.achievements .card,
+.certificates .card,
+.extracurriculars .card{
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+	background: #111111;
+	margin-left: 1rem;
+	height: 18vh;
+	gap: 3rem;	
+	border: none;
+	margin-bottom: 6rem;
+    position: relative;
+    padding-left: 11rem; 
+	margin-top: 3rem;
+}
+
+.achievements .card:hover,
+.certificates .card:hover,
+.extracurriculars .card:hover{
+	transform: scale(1.0);
+	cursor: default;
+	box-shadow: none;
+	background: #111111;
+	color: #f2f2f2;
+}
+
+.achievements .card i,
+.certificates .card i,
+.extracurriculars .card i {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*====================================================================================================
+											 Contact
+====================================================================================================*/
+#contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+}
+
+#contact h1 {
+	color: #f2f2f2;
+	font-size: 72px;
+	margin: 0;
+}
+
+#contact h2 {
+	color: #7f47f4;
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 10px;
+}
+
+/*====================================================================================================
+									Projects + Side-Quests
+====================================================================================================*/
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 40vh;
+	padding: 2rem;
+	background-color: #000;
+	border: 2px solid #7f47f4;
+	border-radius: 2rem;
+	color: #f2f2f2;
+	text-align: center;
+	font-size: 1.6rem;
+	cursor: pointer;
+	transition: 0.4s ease;
+	box-shadow: 0 0 0 transparent;
+}
+
+.card:hover {
+	background-color: #7f47f4;
+	color: #000;
+	transform: scale(1.03) translateY(-5px);
+	box-shadow: 0 0 20px #7f47f4;
+}
+
+.card i{
+	font-size: 6rem;
+	color: #e9e9e9;
+}
+
+
+/*====================================================================================================
 											Cross Platform
 ====================================================================================================*/
 @media (max-width: 1000px) {
@@ -239,7 +378,7 @@ header {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 	header {
 		min-height: 70px;
 		box-sizing: border-box;
@@ -304,95 +443,26 @@ header {
 		grid-template-rows: 1fr;
 		gap: 20px;
 	}
-}
 
-/*====================================================================================================
-											About Section
-====================================================================================================*/
-#me {
-	font-size: 1.4rem;
-}
+	#me .achievements,
+	#me .certificates,
+	#me .extracurriculars{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 
-.icon-block {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 4rem;
-	text-align: center;
-}
+	#me .achievements .card,
+	#me .certificates .card,
+	#me .extracurriculars .card {
+		margin-bottom: 0;
+		height: 15vh;
+    	padding-left: 12rem; 
+	}
 
-.icon-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.icon-item img {
-	margin-top: 4rem;
-	width: 8rem;
-	transition: 0.3s ease;
-}
-
-.icon-item img:hover {
-	transform: scale(1.1);
-}
-
-#me hr {
-	border: none;
-	height: 2px;
-	background-color: #7f47f4;
-	margin: 20px 0;
-}
-
-/*====================================================================================================
-											 Contact
-====================================================================================================*/
-#contact {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	text-align: center;
-}
-
-#contact h1 {
-	color: #f2f2f2;
-	font-size: 72px;
-	margin: 0;
-}
-
-#contact h2 {
-	color: #7f47f4;
-	font-size: 32px;
-	font-weight: normal;
-	margin-top: 10px;
-}
-
-/*====================================================================================================
-									Projects + Side-Quests
-====================================================================================================*/
-.card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 40vh;
-	padding: 2rem;
-	background-color: #000;
-	border: 2px solid #7f47f4;
-	border-radius: 2rem;
-	color: #f2f2f2;
-	text-align: center;
-	font-size: 1.6rem;
-	cursor: pointer;
-	transition: 0.4s ease;
-	box-shadow: 0 0 0 transparent;
-}
-
-.card:hover {
-	background-color: #7f47f4;
-	color: #000;
-	transform: scale(1.03) translateY(-5px);
-	box-shadow: 0 0 20px #7f47f4;
+	.achievements .card i,
+	.certificates .card i,
+	.extracurriculars .card i {
+		position: absolute;
+		left: 2.5rem;
+	}
 }

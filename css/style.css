@@ -124,6 +124,10 @@ body {
     box-shadow: 0 0 1rem var(--glow-blue);
 }
 
+#main-content {
+    padding-top: 12rem; /* To offset fixed header */
+}
+
 .section-heading {
     font-family: 'Orbitron', monospace;
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -181,7 +185,6 @@ body {
 
 /* ===== LAYOUT & CONTAINERS ===== */
 section {
-    min-height: 100vh;
     padding: var(--space-xl) 9% var(--space-lg);
 }
 
@@ -191,7 +194,7 @@ section {
     padding: 0 2rem;
 }
 
-/* ===== HEADER & NAVIGATION ===== */
+/* ===== HEADER & NAVIGATION - BUG FIXES ===== */
 header {
     position: fixed;
     top: 0;
@@ -231,7 +234,7 @@ header {
     text-shadow: 0 0 1rem var(--glow-purple);
 }
 
-/* Navigation */
+/* Navigation - Fixed hover bugs */
 .navbar {
     display: flex;
     gap: var(--space-md);
@@ -257,33 +260,21 @@ header {
     border: 1px solid transparent;
 }
 
-.nav-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 162, 255, 0.1), transparent);
-    transition: left var(--transition-slow);
-}
-
-.nav-link:hover::before {
-    left: 100%;
-}
-
+/* Fixed: Simplified hover effect to prevent bugs */
 .nav-link:hover,
 .nav-link.active {
     color: var(--neon-cyan);
     border-color: var(--neon-cyan);
     box-shadow: 0 0 1rem var(--glow-cyan);
+    background: rgba(0, 162, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-link.active {
     background: rgba(0, 162, 255, 0.1);
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Fixed toggle issues */
 #menu-toggle {
     display: none;
 }
@@ -294,6 +285,7 @@ header {
     gap: 0.4rem;
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 1002;
 }
 
 .hamburger-line {
@@ -302,6 +294,43 @@ header {
     background: var(--text-primary);
     border-radius: 0.2rem;
     transition: var(--transition-normal);
+}
+
+/* Fixed: Ensure navbar is hidden by default on mobile */
+@media (max-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: var(--dark-card);
+        flex-direction: column;
+        transition: var(--transition-normal);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        padding: var(--space-md);
+        border-top: 1px solid var(--dark-border);
+    }
+
+    #menu-toggle:checked ~ .navbar {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+    }
 }
 
 /* ===== HERO SECTION ===== */
@@ -365,11 +394,11 @@ header {
 }
 
 .hero-content h1 {
-    font-size: clamp(4rem, 8vw, 6rem);
+    font-size: 8rem;
     font-weight: 800;
     line-height: 1.3;
-    margin-bottom: var(--space-sm);
-    text-align: left;
+    margin-bottom: var(--space-md);
+    text-align: center;
 }
 
 .hero-description {
@@ -1098,6 +1127,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 .projects-hero::before {
@@ -1155,7 +1185,7 @@ header {
 
 .filter-btn:hover,
 .filter-btn.active {
-    color: var(--dark-bg);
+    color: var(--text-primary);
     border-color: var(--neon-purple);
     box-shadow: 0 0 1rem var(--glow-purple);
 }
@@ -1364,7 +1394,7 @@ header {
     margin-right: auto;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE DESIGN - BUG FIXES ===== */
 @media (max-width: 1200px) {
     .hero-container {
         gap: 6rem;
@@ -1402,20 +1432,20 @@ header {
         text-align: center;
     }
     
+    /* Fixed: Mobile menu positioning and behavior */
     .navbar {
         position: fixed;
         top: 100%;
-        right: 0;
-        width: 45vw;
-        max-width: 25rem;
-        padding: var(--space-md);
+        left: 0;
+        width: 100%;
         background-color: var(--dark-card);
-        border-radius: var(--radius-md) 0 0 var(--radius-md);
         flex-direction: column;
         transition: var(--transition-normal);
-        border: 0.1rem solid var(--dark-border);
-        box-shadow: -0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.3);
-        transform: translateX(100%);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        padding: var(--space-md);
+        border-top: 1px solid var(--dark-border);
     }
     
     .nav-list {
@@ -1433,14 +1463,18 @@ header {
     
     .menu-icon {
         display: flex;
+        z-index: 1002;
     }
     
+    /* Fixed: Proper mobile menu toggle */
     #menu-toggle:checked ~ .navbar {
-        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
     
     #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(0.6rem, 0.6rem);
+        transform: rotate(45deg) translate(0.5rem, 0.5rem);
     }
     
     #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(2) {
@@ -1448,7 +1482,7 @@ header {
     }
     
     #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(0.6rem, -0.6rem);
+        transform: rotate(-45deg) translate(0.5rem, -0.5rem);
     }
     
     .projects-grid {
@@ -1602,7 +1636,7 @@ header {
     }
     
     .navbar {
-        width: 70vw;
+        width: 100%;
     }
     
     .social-links a {

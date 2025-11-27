@@ -45,7 +45,9 @@
     --transition-slow: 0.5s ease;
 }
 
-/* ===== RESET & BASE STYLES ===== */
+/* ==================================================================================================== */
+/* RESET & BASE STYLES */
+/* ==================================================================================================== */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -67,7 +69,9 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== ACCESSIBILITY ===== */
+/* ==================================================================================================== */
+/* ACCESSIBILITY */
+/* ==================================================================================================== */
 .skip-link {
     position: absolute;
     top: -4rem;
@@ -99,7 +103,9 @@ body {
     border: 0;
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* ==================================================================================================== */
+/* TYPOGRAPHY */
+/* ==================================================================================================== */
 .main-title {
     font-family: 'Orbitron', monospace;
     font-size: clamp(3rem, 8vw, 6rem);
@@ -122,10 +128,6 @@ body {
     background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
     border-radius: 0.2rem;
     box-shadow: 0 0 1rem var(--glow-blue);
-}
-
-#main-content {
-    padding-top: 12rem; /* To offset fixed header */
 }
 
 .section-heading {
@@ -183,7 +185,13 @@ body {
     text-shadow: 0 0 0.5rem var(--glow-purple);
 }
 
-/* ===== LAYOUT & CONTAINERS ===== */
+/* ==================================================================================================== */
+/* LAYOUT & CONTAINERS */
+/* ==================================================================================================== */
+#main-content {
+    padding-top: 12rem;
+}
+
 section {
     padding: var(--space-xl) 9% var(--space-lg);
 }
@@ -194,7 +202,9 @@ section {
     padding: 0 2rem;
 }
 
-/* ===== HEADER & NAVIGATION - BUG FIXES ===== */
+/* ==================================================================================================== */
+/* HEADER & NAVIGATION */
+/* ==================================================================================================== */
 header {
     position: fixed;
     top: 0;
@@ -218,7 +228,6 @@ header {
     align-items: center;
 }
 
-/* Logo */
 .logo {
     font-family: 'Orbitron', monospace;
     font-size: 3rem;
@@ -234,7 +243,6 @@ header {
     text-shadow: 0 0 1rem var(--glow-purple);
 }
 
-/* Navigation - Fixed hover bugs */
 .navbar {
     display: flex;
     gap: var(--space-md);
@@ -260,7 +268,6 @@ header {
     border: 1px solid transparent;
 }
 
-/* Fixed: Simplified hover effect to prevent bugs */
 .nav-link:hover,
 .nav-link.active {
     color: var(--neon-cyan);
@@ -274,7 +281,6 @@ header {
     background: rgba(0, 162, 255, 0.1);
 }
 
-/* Mobile Menu - Fixed toggle issues */
 #menu-toggle {
     display: none;
 }
@@ -296,44 +302,9 @@ header {
     transition: var(--transition-normal);
 }
 
-/* Fixed: Ensure navbar is hidden by default on mobile */
-@media (max-width: 992px) {
-    .navbar {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: auto;
-        background-color: var(--dark-card);
-        flex-direction: column;
-        transition: var(--transition-normal);
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        padding: var(--space-md);
-        border-top: 1px solid var(--dark-border);
-    }
-
-    #menu-toggle:checked ~ .navbar {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(0.5rem, 0.5rem);
-    }
-
-    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-
-    #menu-toggle:checked ~ .menu-icon .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(0.5rem, -0.5rem);
-    }
-}
-
-/* ===== HERO SECTION ===== */
+/* ==================================================================================================== */
+/* HERO SECTION */
+/* ==================================================================================================== */
 .hero {
     display: flex;
     justify-content: center;
@@ -408,7 +379,9 @@ header {
     margin-bottom: var(--space-md);
 }
 
-/* ===== SOCIAL LINKS ===== */
+/* ==================================================================================================== */
+/* SOCIAL LINKS */
+/* ==================================================================================================== */
 .social-links {
     display: flex;
     gap: var(--space-sm);
@@ -454,7 +427,9 @@ header {
     left: 0;
 }
 
-/* ===== BUTTONS ===== */
+/* ==================================================================================================== */
+/* BUTTONS */
+/* ==================================================================================================== */
 .btn {
     display: inline-block;
     padding: 1.2rem 3rem;
@@ -510,9 +485,9 @@ header {
     box-shadow: 0 0 2rem var(--glow-cyan);
 }
 
-/* ===== MAIN CONTENT SECTIONS ===== */
-
-/* Projects Section */
+/* ==================================================================================================== */
+/* PROJECTS SECTION */
+/* ==================================================================================================== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
@@ -580,7 +555,9 @@ header {
     margin-top: var(--space-lg);
 }
 
-/* About Section */
+/* ==================================================================================================== */
+/* ABOUT SECTION */
+/* ==================================================================================================== */
 .skills-section,
 .achievements-section,
 .certifications-section,
@@ -597,7 +574,6 @@ header {
     box-shadow: 0 0 1rem var(--glow-purple);
 }
 
-/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -637,7 +613,6 @@ header {
     color: var(--text-secondary);
 }
 
-/* Cards Grid */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -714,7 +689,9 @@ header {
     line-height: 1.6;
 }
 
-/* ===== FOOTER ===== */
+/* ==================================================================================================== */
+/* FOOTER */
+/* ==================================================================================================== */
 .footer {
     background: var(--dark-surface);
     padding: var(--space-lg);
@@ -726,8 +703,8 @@ header {
     max-width: 120rem;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: var(--space-md);
 }
@@ -737,23 +714,9 @@ header {
     font-size: 1.4rem;
 }
 
-.footer-links {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.footer-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 1.4rem;
-    transition: var(--transition-normal);
-}
-
-.footer-links a:hover {
-    color: var(--neon-cyan);
-}
-
-/* ===== ANIMATIONS ===== */
+/* ==================================================================================================== */
+/* ANIMATIONS */
+/* ==================================================================================================== */
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -783,9 +746,9 @@ header {
     }
 }
 
-/* ===== PAGE-SPECIFIC STYLES ===== */
-
-/* Contact Page */
+/* ==================================================================================================== */
+/* CONTACT PAGE STYLES */
+/* ==================================================================================================== */
 .contact-hero {
     display: flex;
     align-items: center;
@@ -943,17 +906,6 @@ header {
     width: 100%;
 }
 
-.contact-status {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    background: rgba(0, 255, 149, 0.1);
-    color: var(--neon-green);
-    border-radius: var(--radius-sm);
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: 1px solid rgba(0, 255, 149, 0.3);
-}
-
 .social-connect {
     margin: var(--space-xl) 0;
     padding: var(--space-lg);
@@ -982,7 +934,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: var(--space-xs);
-    padding: var(--space-md);
+    padding: var(--space-lg);
     background: var(--dark-surface);
     border-radius: var(--radius-md);
     text-decoration: none;
@@ -1000,52 +952,13 @@ header {
 }
 
 .social-connect .social-links a i {
-    font-size: 2.5rem;
-    color: var(--neon-purple);
+    font-size: 2.2rem;
+    color: var(--text-primary);
 }
 
 .social-connect .social-links a span {
     font-size: 1.4rem;
     font-weight: 600;
-}
-
-.cta-section {
-    text-align: center;
-    padding: var(--space-xl);
-    background: linear-gradient(135deg, var(--dark-card) 0%, rgba(17, 17, 17, 0.9) 100%);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--dark-border);
-    margin-top: var(--space-lg);
-}
-
-.cta-section h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.8rem;
-    color: var(--text-primary);
-    margin-bottom: var(--space-sm);
-}
-
-.cta-section p {
-    font-size: 1.6rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
-    max-width: 60rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.cta-buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    padding: 1.2rem 2.5rem;
 }
 
 .contact-visual {
@@ -1120,7 +1033,9 @@ header {
     animation-delay: 4.8s;
 }
 
-/* Projects Page */
+/* ==================================================================================================== */
+/* PROJECTS PAGE STYLES */
+/* ==================================================================================================== */
 .projects-hero {
     padding: var(--space-xl) 9% var(--space-lg);
     background: linear-gradient(135deg, var(--dark-bg) 0%, rgba(10, 10, 10, 0.95) 100%);
@@ -1394,7 +1309,9 @@ header {
     margin-right: auto;
 }
 
-/* ===== RESPONSIVE DESIGN - BUG FIXES ===== */
+/* ==================================================================================================== */
+/* RESPONSIVE DESIGN */
+/* ==================================================================================================== */
 @media (max-width: 1200px) {
     .hero-container {
         gap: 6rem;
@@ -1432,7 +1349,6 @@ header {
         text-align: center;
     }
     
-    /* Fixed: Mobile menu positioning and behavior */
     .navbar {
         position: fixed;
         top: 100%;
@@ -1466,7 +1382,6 @@ header {
         z-index: 1002;
     }
     
-    /* Fixed: Proper mobile menu toggle */
     #menu-toggle:checked ~ .navbar {
         transform: translateY(0);
         opacity: 1;
@@ -1580,17 +1495,6 @@ header {
         padding: var(--space-sm);
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-buttons .btn {
-        width: 100%;
-        max-width: 25rem;
-        justify-content: center;
-    }
-    
     .projects-hero,
     .projects-grid-section {
         padding: var(--space-lg) 5% var(--space-md);
@@ -1656,14 +1560,6 @@ header {
     
     .visual-element i {
         font-size: 6rem;
-    }
-    
-    .cta-section {
-        padding: var(--space-lg);
-    }
-    
-    .cta-section h2 {
-        font-size: 2.2rem;
     }
     
     .project-card {

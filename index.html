@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Daksh | Portfolio</title>
+	<title>Daksh Acharya | Developer Portfolio</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- Font Awesome Icons -->
@@ -17,7 +17,7 @@
 	<script src="../js/script.js" defer></script>
 
 	<!-- Meta Description -->
-	<meta name="description" content="Daksh Acharya's Developer Portfolio.">
+	<meta name="description" content="Daksh Acharya's Developer Portfolio - 16-year-old student and aspiring software engineer.">
 
 	<!-- Open Graph Tags -->
 	<meta property="og:title" content="Daksh Acharya | Developer Portfolio">
@@ -28,162 +28,262 @@
 </head>
 
 <body>
+	<!-- Skip to main content for accessibility -->
+	<a class="skip-link" href="#main-content">Skip to main content</a>
+
 	<!-- Header -->
 	<header>
-		<div class="header-text">
+		<div class="header-container">
 			<div class="logo">Daksh Acharya</div>
-			<input type="checkbox" name="menu" id="menu">
-
-			<label for="menu" class="menu-icon">
-				<i class="fas fa-bars"></i>
+			
+			<!-- Mobile menu toggle -->
+			<input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+			<label for="menu-toggle" class="menu-icon" aria-expanded="false">
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="sr-only">Menu</span>
 			</label>
 
-			<nav class="navbar">
-				<a href="index.html" class="active">Home</a>
-				<a href="projects.html">Projects</a>
-				<a href="contact.html">Contact</a>
+			<!-- Navigation -->
+			<nav class="navbar" aria-label="Main navigation">
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+					<li><a href="projects.html" class="nav-link">Projects</a></li>
+					<li><a href="contact.html" class="nav-link">Contact</a></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<!-- Hero -->
-	<section class="home" id="home">
-		<div class="homeimg">
-			<img src="../images/Me.jpg" alt="Daksh Acharya">
-		</div>
-
-		<div class="content">
-			<h1>Hello, I am <span>Daksh</span></h1>
-			<p>
-				I am a <span>16-year-old student</span> at Westering High hoping to one day become a <span>Software Engineer.</span>
-				I love building apps and games, and I'm curious about learning new things and creating programs
-				that <span>solve real world problems</span> or <span>just bring ideas to life</span>
-			</p>
-
-			<div class="socials">
-				<a target="_blank" href="https://github.com/DakshAcharya"><i class="fa-brands fa-github"></i></a>
-				<a href="#"><i class="fa-brands fa-linkedin"></i></a>
-				<a target="_blank" href="https://www.instagram.com/notdaksh447/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
-			</div>
-
-			<a href="me.html" class="btn">Learn More</a>
-		</div>
-	</section>
-
-	<!-- Projects -->
-	<section id="projects">
-		<h1>Projects:</h1>
-
-		<div class="grid">
-			<a class="card" href="#">Custom Made AI</a>
-			<a class="card" href="#">Python AI Study App</a>
-			<a class="card" href="#">Smart To-Do list App</a>
-			<a class="card" href="#">Document Sync App</a>
-			<a class="card" href="#">Platformer Game</a>
-			<a class="card" href="#">Durban on the Bay Website</a>
-		</div>
-
-		<a class="btn" href="projects.html">All Projects</a>
-	</section>
-
-	<!-- Info -->
-	<section id="me">
-		<h1>About Me</h1>
-
-		<!-- Programming Skills -->
-		<div>
-			<h2>Programming Skills</h2>
-			<hr>
-			<div class="icon-block">
-				<div class="icon-item">
-					<img src="/images/Python.png" alt="Python">
-					<div class="subtext">Python</div>
+	<main id="main-content">
+		<!-- Hero Section -->
+		<section class="hero" id="home" aria-labelledby="hero-heading">
+			<div class="hero-container">
+				<div class="hero-image">
+					<img src="../images/Me.jpg" alt="Portrait of Daksh Acharya" loading="eager">
 				</div>
-				<div class="icon-item">
-					<img src="/images/JS.png" alt="JavaScript">
-					<div class="subtext">JavaScript</div>
-				</div>
-				<div class="icon-item">
-					<img src="/images/HTML.png" alt="HTML">
-					<div class="subtext">HTML</div>
-				</div>
-				<div class="icon-item">
-					<img src="/images/CSS.png" alt="CSS">
-					<div class="subtext">CSS</div>
-				</div>
-				<div class="icon-item">
-					<img src="/images/GD.png" alt="GDScript">
-					<div class="subtext">GDScript</div>
-				</div>
-				<div class="icon-item">
-					<img src="/images/Delphi.png" alt="Delphi">
-					<div class="subtext">Delphi (Pascal)</div>
+
+				<div class="hero-content">
+					<h1 id="hero-heading">Hello, I am <span class="highlight">Daksh</span></h1>
+					<p class="hero-description">
+						I am a <span class="highlight">16-year-old student</span> at Westering High hoping to one day become a <span class="highlight">Software Engineer.</span>
+						I love building apps and games, and I'm curious about learning new things and creating programs
+						that <span class="highlight">solve real world problems</span> or <span class="highlight">just bring ideas to life</span>.
+					</p>
+
+					<div class="social-links" aria-label="Social media profiles">
+						<a href="https://github.com/DakshAcharya" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+							<i class="fab fa-github" aria-hidden="true"></i>
+						</a>
+						<a href="#" aria-label="LinkedIn profile (coming soon)">
+							<i class="fab fa-linkedin" aria-hidden="true"></i>
+						</a>
+						<a href="https://www.instagram.com/notdaksh447/?next=%2F" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+							<i class="fab fa-instagram" aria-hidden="true"></i>
+						</a>
+					</div>
+
+					<a href="me.html" class="btn btn-primary">Learn More</a>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<h2>Achievements</h2>
-		<hr>
-		<div class="achievements">
-			<div class="card">
-				<i class="fa-solid fa-award"></i>
-				Selected for UJ IT Winter School
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-briefcase"></i>
-				Selected for a PwC Accounting Program
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-code"></i>
-				Self-taught programmer
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-store"></i>
-				Founded Gelato print-on-demand business
-			</div>
-		</div>
+		<!-- Projects Section -->
+		<section id="projects" class="section" aria-labelledby="projects-heading">
+			<div class="section-container">
+				<h2 id="projects-heading">Featured Projects</h2>
 
-		<h2>Certifications</h2>
-		<hr>
-		<div class="certificates">
-			<div class="card">
-				<i class="fa-solid fa-graduation-cap"></i>
-				Harvard CS50 Certificate
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-certificate"></i>
-				Google IT Support Certificate
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-trophy"></i>
-				2x IT Olympiad participant
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-hands-helping"></i>
-				Boys Championing Change Certificate
-			</div>
-		</div>
+				<div class="projects-grid">
+					<a class="project-card" href="#" aria-label="View Custom Made AI project">
+						<h3 class="project-title">Custom Made AI</h3>
+						<p class="project-description">A custom AI solution built from scratch</p>
+					</a>
+					<a class="project-card" href="#" aria-label="View Python AI Study App project">
+						<h3 class="project-title">Python AI Study App</h3>
+						<p class="project-description">Educational app using artificial intelligence</p>
+					</a>
+					<a class="project-card" href="#" aria-label="View Smart To-Do list App project">
+						<h3 class="project-title">Smart To-Do List App</h3>
+						<p class="project-description">Intelligent task management application</p>
+					</a>
+					<a class="project-card" href="#" aria-label="View Document Sync App project">
+						<h3 class="project-title">Document Sync App</h3>
+						<p class="project-description">Cross-platform document synchronization tool</p>
+					</a>
+					<a class="project-card" href="#" aria-label="View Platformer Game project">
+						<h3 class="project-title">Platformer Game</h3>
+						<p class="project-description">2D platform game built with Godot</p>
+					</a>
+					<a class="project-card" href="#" aria-label="View Durban on the Bay Website project">
+						<h3 class="project-title">Durban on the Bay Website</h3>
+						<p class="project-description">Website for a local business</p>
+					</a>
+				</div>
 
-		<h2>Leadership & Extracurriculars</h2>
-		<hr>
-		<div class="extracurriculars">
-			<div class="card">
-				<i class="fa-solid fa-school"></i>
-				School Prefect
+				<div class="section-footer">
+					<a class="btn btn-secondary" href="projects.html">View All Projects</a>
+				</div>
 			</div>
-			<div class="card">
-				<i class="fa-solid fa-chalkboard-teacher"></i>
-				Peer Tutor
+		</section>
+
+		<!-- About Me Section -->
+		<section id="about" class="section" aria-labelledby="about-heading">
+			<div class="section-container">
+				<h2 id="about-heading">About Me</h2>
+
+				<!-- Programming Skills -->
+				<div class="skills-section">
+					<h3>Programming Skills</h3>
+					<hr class="section-divider">
+					<div class="skills-grid">
+						<div class="skill-item">
+							<img src="/images/Python.png" alt="Python logo" loading="lazy">
+							<span class="skill-name">Python</span>
+						</div>
+						<div class="skill-item">
+							<img src="/images/JS.png" alt="JavaScript logo" loading="lazy">
+							<span class="skill-name">JavaScript</span>
+						</div>
+						<div class="skill-item">
+							<img src="/images/HTML.png" alt="HTML logo" loading="lazy">
+							<span class="skill-name">HTML</span>
+						</div>
+						<div class="skill-item">
+							<img src="/images/CSS.png" alt="CSS logo" loading="lazy">
+							<span class="skill-name">CSS</span>
+						</div>
+						<div class="skill-item">
+							<img src="/images/GD.png" alt="GDScript logo" loading="lazy">
+							<span class="skill-name">GDScript</span>
+						</div>
+						<div class="skill-item">
+							<img src="/images/Delphi.png" alt="Delphi logo" loading="lazy">
+							<span class="skill-name">Delphi (Pascal)</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Achievements -->
+				<div class="achievements-section">
+					<h3>Achievements</h3>
+					<hr class="section-divider">
+					<div class="cards-grid">
+						<div class="achievement-card">
+							<i class="fas fa-award" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Selected for UJ IT Winter School</h4>
+								<p>Participated in intensive IT training program</p>
+							</div>
+						</div>
+						<div class="achievement-card">
+							<i class="fas fa-briefcase" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Selected for PwC Accounting Program</h4>
+								<p>Professional development opportunity</p>
+							</div>
+						</div>
+						<div class="achievement-card">
+							<i class="fas fa-code" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Self-taught Programmer</h4>
+								<p>Developed skills through independent learning</p>
+							</div>
+						</div>
+						<div class="achievement-card">
+							<i class="fas fa-store" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Founded Gelato Print-on-Demand</h4>
+								<p>Entrepreneurial venture in custom merchandise</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Certifications -->
+				<div class="certifications-section">
+					<h3>Certifications</h3>
+					<hr class="section-divider">
+					<div class="cards-grid">
+						<div class="cert-card">
+							<i class="fas fa-graduation-cap" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Harvard CS50 Certificate</h4>
+								<p>Introduction to Computer Science</p>
+							</div>
+						</div>
+						<div class="cert-card">
+							<i class="fas fa-certificate" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Google IT Support Certificate</h4>
+								<p>Professional IT support training</p>
+							</div>
+						</div>
+						<div class="cert-card">
+							<i class="fas fa-trophy" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>2x IT Olympiad Participant</h4>
+								<p>Competed in national IT competitions</p>
+							</div>
+						</div>
+						<div class="cert-card">
+							<i class="fas fa-hands-helping" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Boys Championing Change Certificate</h4>
+								<p>Leadership and social impact program</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Leadership & Extracurriculars -->
+				<div class="extracurriculars-section">
+					<h3>Leadership & Extracurriculars</h3>
+					<hr class="section-divider">
+					<div class="cards-grid">
+						<div class="activity-card">
+							<i class="fas fa-school" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>School Prefect</h4>
+								<p>Student leadership position</p>
+							</div>
+						</div>
+						<div class="activity-card">
+							<i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Peer Tutor</h4>
+								<p>Helping fellow students with academics</p>
+							</div>
+						</div>
+						<div class="activity-card">
+							<i class="fas fa-newspaper" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Writer: The Westeringer</h4>
+								<p>School newspaper contributor</p>
+							</div>
+						</div>
+						<div class="activity-card">
+							<i class="fas fa-chess-knight" aria-hidden="true"></i>
+							<div class="card-content">
+								<h4>Sports: Squash, Hockey, Chess</h4>
+								<p>Active participation in multiple sports</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="card">
-				<i class="fa-solid fa-newspaper"></i>
-				Writer: The Westeringer
-			</div>
-			<div class="card">
-				<i class="fa-solid fa-chess-knight"></i>
-				Sports: Squash, Hockey, Chess
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>&copy; <span id="current-year">2023</span> Daksh Acharya. All rights reserved.</p>
+			<div class="footer-links">
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="terms.html">Terms of Use</a>
 			</div>
 		</div>
-	</section>
+	</footer>
 </body>
 </html>

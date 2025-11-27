@@ -3,66 +3,168 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Daksh | Contact</title>
+	<title>Daksh Acharya | Contact</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 	<!-- Custom Styles & Scripts -->
 	<link rel="stylesheet" href="../css/style.css">
 	<script src="../js/script.js" defer></script>
 
-	<!-- Meta Description (for search engines like Google) -->
-	<meta name="description" content="Contact Daksh Acharya for collaborations or inquiries.">
+	<!-- Meta Description -->
+	<meta name="description" content="Contact Daksh Acharya for collaborations, project ideas, or just to say hello.">
 
-	<!-- Open Graph Tags (for rich link previews on social media) -->
+	<!-- Open Graph Tags -->
 	<meta property="og:title" content="Daksh Acharya | Contact">
-	<meta property="og:description" content="Reach out to Daksh Acharya for project ideas or feedback.">
+	<meta property="og:description" content="Reach out to Daksh Acharya for project collaborations, feedback, or just to connect.">
 	<meta property="og:image" content="https://dakshacharya.github.io/images/logo.png">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://dakshacharya.github.io/contact.html">
-
 </head>
+
 <body>
+	<!-- Skip to main content for accessibility -->
+	<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!--====================================================================================================-->
-										<!--Header-->
-<!--====================================================================================================-->
+	<!-- Header -->
 	<header>
-		<div class="header-text">
-			<a class="logo">Daksh Acharya</a>
-			<input type="checkbox" name="menu" id="menu">
-
-			<label for="menu" class="menu-icon">
-				<i class="fas fa-bars"></i>
-			</label>
+		<div class="header-container">
+			<a href="index.html" class="logo">Daksh Acharya</a>
 			
-			<nav class="navbar">
-				<a href="index.html">Home</a>
-				<a href="projects.html">Projects</a>
-				<a href="me.html">Me</a>
-				<a href="contact.html" class="active">Contact</a>
+			<!-- Mobile menu toggle -->
+			<input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+			<label for="menu-toggle" class="menu-icon" aria-expanded="false">
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="sr-only">Menu</span>
+			</label>
+
+			<!-- Navigation -->
+			<nav class="navbar" aria-label="Main navigation">
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="projects.html" class="nav-link">Projects</a></li>
+					<li><a href="me.html" class="nav-link">About</a></li>
+					<li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+				</ul>
 			</nav>
 		</div>
-		
 	</header>
 
-<!--====================================================================================================-->
-										<!--Info-->
-<!--====================================================================================================-->
-	<section id="contact">
-		<h1>You can't...</h1>
-		<h2>but thanks for visiting :)</h2>
-		<a href="index.html" class="btn">Back</a>
-	</section>
-	
-<!--====================================================================================================-->
-										<!--Footer-->
-<!--====================================================================================================-->
-	<footer style="text-align: center; margin-bottom: 80px; margin-top: 80px; font-size: 0.9em; color: #777;">
-		Built by Daksh Acharya, June 2025
-	</footer>
+	<main id="main-content">
+		<!-- Contact Hero Section -->
+		<section class="contact-hero" id="contact">
+			<div class="contact-container">
+				<div class="contact-content">
+					<h1 class="main-title">Get In Touch</h1>
+					<p class="hero-subtitle">
+						I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+					</p>
+					
+					<div class="contact-methods">
+						<div class="contact-method">
+							<div class="contact-icon">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<div class="contact-info">
+								<h3>Email</h3>
+								<p>daksh.acharya@example.com</p>
+								<a href="mailto:daksh.acharya@example.com" class="contact-link">Send Message</a>
+							</div>
+						</div>
+						
+						<div class="contact-method">
+							<div class="contact-icon">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<div class="contact-info">
+								<h3>Location</h3>
+								<p>Port Elizabeth, South Africa</p>
+								<a href="https://maps.google.com/?q=Port+Elizabeth+South+Africa" target="_blank" class="contact-link">View on Map</a>
+							</div>
+						</div>
+						
+						<div class="contact-method">
+							<div class="contact-icon">
+								<i class="fas fa-clock"></i>
+							</div>
+							<div class="contact-info">
+								<h3>Response Time</h3>
+								<p>Usually within 24 hours</p>
+								<span class="contact-status">Available for projects</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="social-connect">
+						<h2>Or connect with me on social media</h2>
+						<div class="social-links">
+							<a href="https://github.com/DakshAcharya" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+								<i class="fab fa-github" aria-hidden="true"></i>
+								<span>GitHub</span>
+							</a>
+							<a href="#" aria-label="LinkedIn profile (coming soon)">
+								<i class="fab fa-linkedin" aria-hidden="true"></i>
+								<span>LinkedIn</span>
+							</a>
+							<a href="https://www.instagram.com/notdaksh447/?next=%2F" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
+								<span>Instagram</span>
+							</a>
+							<a href="#" aria-label="Twitter profile (coming soon)">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+								<span>Twitter</span>
+							</a>
+						</div>
+					</div>
+					
+					<div class="cta-section">
+						<h2>Let's create something amazing together</h2>
+						<p>Whether you have a project in mind or just want to say hello, I'd love to hear from you.</p>
+						<div class="cta-buttons">
+							<a href="mailto:daksh.acharya@example.com" class="btn btn-primary">
+								<i class="fas fa-paper-plane"></i>
+								Send Message
+							</a>
+							<a href="projects.html" class="btn btn-secondary">
+								<i class="fas fa-code"></i>
+								View My Work
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="contact-visual">
+					<div class="visual-element">
+						<i class="fas fa-comment-dots"></i>
+						<div class="floating-dots">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>&copy; <span id="current-year">2025</span> Daksh Acharya. All rights reserved.</p>
+			<div class="footer-links">
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="terms.html">Terms of Use</a>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

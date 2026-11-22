@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DAKSH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* red — from file 2, matches reference saturation */
+    --red-top: #ff3d52;
+    --red-mid: #e61836;
+    --red-bot: #a50018;
+    /* blue — from file 2, matches reference flame/outline */
+    --blue-light: #a8e4ff;
+    --blue-mid: #07a7ca;
+    --blue-dark: #0850a4;
+    --blue-deep: #042a63;
+    --white: #ffffff;
+    --skew: -12deg;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    background: #000;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  /* ---------- logo wrapper ---------- */
+  .logo {
+    position: relative;
+    width: 820px;
+    max-width: 96vw;
+    padding: 70px 110px 60px;
+    text-align: center;
+    font-size: min(180px, 22vw);
+  }
+
+  /* ---------- main wordmark ---------- */
+  .title {
+    position: relative;
+    z-index: 2;
+    isolation: isolate;
+    margin: 0;
+    font-family: 'Goldman', 'Rockwell Extra Bold', 'Arial Black', Impact, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    transform: skewX(var(--skew));
+  }
+
+  /* outermost bright-blue stroke (from file 2's palette) */
+  .title::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    color: var(--blue-dark);
+    -webkit-text-stroke: 0.18em var(--blue-dark);
+    text-shadow: 0.04em 0.05em 0 var(--blue-deep);
+    stroke-linejoin: round;
+  }
+
+  /* inner white stroke */
+  .title::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    color: var(--white);
+    -webkit-text-stroke: 0.09em var(--white);
+    stroke-linejoin: round;
+  }
+
+  /* red gradient fill */
+  .title span {
+    display: inline-block;
+    color: transparent;
+    background:
+      linear-gradient(180deg,
+        rgba(255,255,255,.35) 0%,
+        rgba(255,255,255,0) 22%),
+      linear-gradient(180deg,
+        var(--red-top) 0%,
+        var(--red-mid) 48%,
+        var(--red-bot) 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+
+  /* ---------- bars + subtitle ---------- */
+  .sub {
+    position: relative;
+    z-index: 2;
+    margin: 0.08em auto 0;
+    width: 96%;
+    transform: skewX(var(--skew));
+  }
+
+  .bar {
+    height: 0.07em;
+    border-radius: 0.01em;
+    background: linear-gradient(180deg, var(--red-top), var(--red-mid) 55%, var(--red-bot));
+    box-shadow:
+      0 0 0 0.012em var(--white),
+      0 0 0 0.026em var(--blue-dark);
+  }
+
+  .sub-text {
+    margin: 0;
+    padding: 0.03em 0;
+    font-family: 'Goldman', 'Arial Black', Impact, sans-serif;
+    font-weight: 700;
+    font-size: 0.145em;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    /* white fill + blue outline (matches reference's ブリーチ treatment) */
+    color: var(--white);
+    text-shadow:
+       0.04em  0      0 var(--blue-dark),
+      -0.04em  0      0 var(--blue-dark),
+       0      0.04em 0 var(--blue-dark),
+       0     -0.04em 0 var(--blue-dark),
+       0.03em  0.03em 0 var(--blue-dark),
+      -0.03em  0.03em 0 var(--blue-dark),
+       0.03em -0.03em 0 var(--blue-dark),
+      -0.03em -0.03em 0 var(--blue-dark),
+       0.02em  0.05em 0 var(--blue-deep);
+  }
+
+  .sub .bar + .sub-text { margin-top: 0.32em; }
+  .sub .sub-text + .bar { margin-top: 0.32em; }
+
+  /* ---------- flames ---------- */
+  .flame {
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    width: 26%;
+    height: 85%;
+    pointer-events: none;
+  }
+  .flame.left  { left: -2%; }
+  .flame.right { right: -2%; transform: scaleX(-1); }
+  .flame svg   { width: 100%; height: 100%; overflow: visible; }
+</style>
+</head>
+<body>
+
+  <div class="logo" role="img" aria-label="DAKSH — aspiring software engineer">
+
+    <!-- left flame -->
+    <div class="flame left">
+      <svg viewBox="0 0 200 260" aria-hidden="true">
+        <defs>
+          <linearGradient id="fgL" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0"   stop-color="#a8e4ff"/>
+            <stop offset=".35" stop-color="#07a7ca"/>
+            <stop offset="1"   stop-color="#0850a4"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#fgL)" stroke="#fff" stroke-width="5" stroke-linejoin="round"
+          d="M200 250 C120 252 55 215 38 150 C28 118 46 90 68 56
+             C68 88 84 104 100 98 C88 72 98 36 132 4
+             C128 46 150 68 166 90 C186 116 196 152 200 190 Z"/>
+        <path fill="#cceeff" opacity=".85"
+          d="M196 226 C140 226 96 196 84 150 C78 128 88 108 104 88
+             C108 108 122 120 134 114 C128 100 132 84 148 66
+             C150 92 168 110 180 132 C190 152 196 186 196 226 Z"/>
+        <path fill="url(#fgL)" stroke="#fff" stroke-width="4" stroke-linejoin="round"
+          d="M60 190 C30 170 22 140 34 112 C38 134 52 140 62 134 C56 150 64 168 80 180 Z"/>
+      </svg>
+    </div>
+
+    <!-- right flame (mirrored) -->
+    <div class="flame right">
+      <svg viewBox="0 0 200 260" aria-hidden="true">
+        <defs>
+          <linearGradient id="fgR" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0"   stop-color="#a8e4ff"/>
+            <stop offset=".35" stop-color="#07a7ca"/>
+            <stop offset="1"   stop-color="#0850a4"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#fgR)" stroke="#fff" stroke-width="5" stroke-linejoin="round"
+          d="M200 250 C120 252 55 215 38 150 C28 118 46 90 68 56
+             C68 88 84 104 100 98 C88 72 98 36 132 4
+             C128 46 150 68 166 90 C186 116 196 152 200 190 Z"/>
+        <path fill="#cceeff" opacity=".85"
+          d="M196 226 C140 226 96 196 84 150 C78 128 88 108 104 88
+             C108 108 122 120 134 114 C128 100 132 84 148 66
+             C150 92 168 110 180 132 C190 152 196 186 196 226 Z"/>
+        <path fill="url(#fgR)" stroke="#fff" stroke-width="4" stroke-linejoin="round"
+          d="M60 190 C30 170 22 140 34 112 C38 134 52 140 62 134 C56 150 64 168 80 180 Z"/>
+      </svg>
+    </div>
+
+    <!-- wordmark -->
+    <h1 class="title" data-text="DAKSH"><span>DAKSH</span></h1>
+
+    <!-- bars + subtitle -->
+    <div class="sub">
+      <div class="bar"></div>
+      <p class="sub-text">Aspiring Software Engineer</p>
+      <div class="bar"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
